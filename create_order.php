@@ -13,7 +13,7 @@
 
 
     error_reporting(0);
-    date_default_timezone_set('Asia/Makassar');
+    date_default_timezone_set('Africa/Nairobi');
 
     function fill_product($pdo){
       $output= '';
@@ -50,7 +50,7 @@
       if($arr_product_code == ""){
         echo '<script type="text/javascript">
               jQuery(function validation(){
-              swal("Warning", "Silahkan Isi Form Transaksi", "warning", {
+              swal("Warning", "Please Fill In The Transaction Form!", "warning", {
               button: "Continue",
                   });
               });
@@ -80,7 +80,7 @@
             if($rem_qty<0){
               echo '<script type="text/javascript">
                     jQuery(function validation(){
-                    swal("Warning", "Masukan Jumlah Beli", "warning", {
+                    swal("Warning", "Enter The Purchase Amount!", "warning", {
                     button: "Continue",
                         });
                     });
@@ -121,7 +121,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Transaksi
+        Transaction
       </h1>
       <hr>
     </section>
@@ -133,7 +133,7 @@
             <div class="box-body">
               <div class="col-md-4">
                 <div class="form-group">
-                  <label>Nama Petugas</label>
+                  <label>User Name</label>
                   <div class="input-group">
                     <div class="input-group-addon">
                       <i class="fa fa-user"></i>
@@ -145,7 +145,7 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label>Tanggal Transaksi</label>
+                  <label>Transaction Date</label>
                   <div class="input-group">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
@@ -158,7 +158,7 @@
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label>Jam Transaksi</label>
+                  <label>Transaction Time</label>
                   <div class="input-group">
                     <div class="input-group-addon">
                       <i class="fa fa-clock-o"></i>
@@ -176,12 +176,12 @@
                   <thead>
                       <tr>
                           <th></th>
-                          <th>Kode</th>
-                          <th>Nama</th>
-                          <th>Persediaan</th>
-                          <th>Harga</th>
-                          <th>Jumlah</th>
-                          <th>Satuan</th>
+                          <th>Code</th>
+                          <th>Name</th>
+                          <th>Stock</th>
+                          <th>Price</th>
+                          <th>Total</th>
+                          <th>Unit</th>
                           <th>Total</th>
                           <th>
                             <button type="button" name="addOrder" class="btn btn-success btn-sm btn_addOrder" required><span>
@@ -203,27 +203,27 @@
                   <label>Total</label>
                   <div class="input-group">
                     <div class="input-group-addon">
-                      <span>Rp</span>
+                      <span>Ksh</span>
                     </div>
                     <input type="text" class="form-control pull-right" name="total" id="total" required readonly>
                   </div>
                   <!-- /.input group -->
                 </div>
                 <div class="form-group">
-                  <label>Uang Diterima</label>
+                  <label>Money Received</label>
                   <div class="input-group">
                     <div class="input-group-addon">
-                      <span>Rp</span>
+                      <span>Ksh</span>
                     </div>
                     <input type="text" class="form-control pull-right" name="paid" id="paid" required>
                   </div>
                   <!-- /.input group -->
                 </div>
                 <div class="form-group">
-                  <label>Uang Kembalian</label>
+                  <label>Change Money</label>
                   <div class="input-group">
                     <div class="input-group-addon">
-                      <span>Rp <?php echo $_SESSION['invoice_id']; ?></span>
+                      <span>Ksh <?php echo $_SESSION['invoice_id']; ?></span>
                     </div>
                     <input type="text" class="form-control pull-right" name="due" id="due" required readonly>
                   </div>
@@ -233,8 +233,8 @@
             </div>
 
             <div class="box-footer" align="center">
-              <input type="submit" name="save_order" value="Simpan Transaksi" class="btn btn-success">
-              <a href="order.php" class="btn btn-warning">Kembali</a>
+              <input type="submit" name="save_order" value="Save Transaction" class="btn btn-success">
+              <a href="order.php" class="btn btn-warning">Cancel</a>
             </div>
           </form>
         </div>
@@ -310,7 +310,7 @@
         var quantity = $(this);
         var tr=$(this).parent().parent();
         if((quantity.val()-0)>(tr.find(".productstock").val()-0)){
-          swal("Warning","Persediaan Tidak Cukup","warning");
+          swal("Warning","Insufficient Stock!","warning");
           quantity.val(1);
           tr.find(".producttotal").val(quantity.val() * tr.find(".productprice").val());
           calculate(0,0);

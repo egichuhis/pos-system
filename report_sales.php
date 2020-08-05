@@ -20,9 +20,9 @@
         <div class="box box-success">
           <form action="" method="POST" autocomplete="off">
             <div class="box-header with-border">
-                <h3 class="box-title">Dari Tanggal : <?php echo $_POST['date_1']?>
+                <h3 class="box-title">Date From: <?php echo $_POST['date_1']?>
                 </h3>
-                <h3 class="box-title">Sampai Tanggal : <?php echo $_POST['date_2'] ?>
+                <h3 class="box-title">Date To<?php echo $_POST['date_2'] ?>
                 </h3>
             </div>
             <div class="box-body">
@@ -48,7 +48,7 @@
                   </div>
                 </div>
                 <div class="col-md-2">
-                  <input type="submit" name="date_filter" value="Lihat" class="btn btn-success btn-sm">
+                  <input type="submit" name="date_filter" value="View" class="btn btn-success btn-sm">
                 </div>
                 <br>
               </div>
@@ -74,7 +74,7 @@
                     <span class="info-box-icon bg-green"><i class="fa fa-shopping-cart"></i></span>
 
                     <div class="info-box-content">
-                      <span class="info-box-text">Total Transaksi</span>
+                      <span class="info-box-text">Total Transactions</span>
                       <span class="info-box-number"><?php echo $invoice; ?></span>
                     </div>
                     <!-- /.info-box-content -->
@@ -91,8 +91,8 @@
                     <span class="info-box-icon bg-green"><i class="fa fa-money"></i></span>
 
                     <div class="info-box-content">
-                      <span class="info-box-text">Total Pendapatan</span>
-                      <span class="info-box-number">Rp.<?php echo number_format($total,0) ; ?></span>
+                      <span class="info-box-text">Total Income</span>
+                      <span class="info-box-number">Ksh.<?php echo number_format($total,0) ; ?></span>
                     </div>
                     <!-- /.info-box-content -->
                   </div>
@@ -109,9 +109,9 @@
                   <table class="table table-striped" id="mySalesReport">
                       <thead>
                           <tr>
-                            <th>Petugas</th>
-                            <th>Tanggal</th>
-                            <th>Pendapatan</th>
+                            <th>Operator</th>
+                            <th>Date</th>
+                            <th>Income</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -126,7 +126,7 @@
                                 <tr>
                                 <td class="text-uppercase"><?php echo $row->cashier_name; ?></td>
                                 <td><?php echo $row->order_date; ?></td>
-                                <td>Rp. <?php echo number_format($row->total); ?></td>
+                                <td>Ksh. <?php echo number_format($row->total); ?></td>
                                 </tr>
                             <?php
                             }
@@ -212,7 +212,7 @@
           data: {
               labels: <?php echo json_encode($date); ?>,
               datasets: [{
-                  label: 'Total Pendapatan',
+                  label: 'Total Income',
                   data: <?php echo json_encode($total); ?>,
                   backgroundColor: 'rgb(13, 192, 58)',
                   borderColor: 'rgb(32, 204, 75)',
@@ -237,7 +237,7 @@
           data: {
               labels: <?php echo json_encode($pname); ?>,
               datasets: [{
-                  label: 'Total Produk Terjual',
+                  label: 'Total Product Sold',
                   data: <?php echo json_encode($qty); ?>,
                   backgroundColor: 'rgb(120,112,175)',
                   borderColor: 'rgb(255,255,255)',

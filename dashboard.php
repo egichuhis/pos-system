@@ -26,11 +26,11 @@
             <span class="info-box-icon bg-aqua"><i class="fa fa-archive"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Persediaan Menipis</span>
+              <span class="info-box-text">Thinning Inventory</span>
               <?php if($total1==true){ ?>
               <span class="info-box-number"><small><?php echo $row->total;?></small></span>
               <?php }else{?>
-              <span class="info-box-text"><strong>Tidak Ada</strong></span>
+              <span class="info-box-text"><strong>To Re-Stock</strong></span>
               <?php }?>
             </div>
             <!-- /.info-box-content -->
@@ -53,7 +53,7 @@
             <span class="info-box-icon bg-aqua"><i class="fa fa-cubes"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Total Produk</span>
+              <span class="info-box-text">Total Product</span>
               <span class="info-box-number"><small><?php echo $row->t ?></small></span>
             </div>
             <!-- /.info-box-content -->
@@ -74,7 +74,7 @@
             <span class="info-box-icon bg-aqua"><i class="fa fa-shopping-cart"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Transaksi Hari Ini</span>
+              <span class="info-box-text">Day's Transactions</span>
               <span class="info-box-number"><small><?php echo $row->i ?></small></span>
             </div>
             <!-- /.info-box-content -->
@@ -96,8 +96,8 @@
             <span class="info-box-icon bg-aqua"><i class="fa fa-money"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Pendapatan Hari Ini</span>
-              <span class="info-box-number"><small>Rp. <?php echo number_format($total,0); ?></small></span>
+              <span class="info-box-text">Today's Income</span>
+              <span class="info-box-number"><small>Ksh. <?php echo number_format($total,0); ?></small></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -109,7 +109,7 @@
       <div class="col-md-offset-1 col-md-10">
         <div class="box box-success">
           <div class="box-header with-border">
-              <h3 class="box-title">Daftar Produk Terlaku</h3>
+              <h3 class="box-title">List of Products Sold</h3>
           </div>
           <div class="box-body">
             <div class="col-md-offset-1 col-md-10">
@@ -118,11 +118,11 @@
                       <thead>
                           <tr>
                               <th>No</th>
-                              <th>Produk</th>
-                              <th>Kode</th>
-                              <th>Terjual</th>
-                              <th>Harga</th>
-                              <th>Pendapatan</th>
+                              <th>Product</th>
+                              <th>Code</th>
+                              <th>Out of Stock</th>
+                              <th>Price</th>
+                              <th>Income</th>
                           </tr>
 
                       </thead>

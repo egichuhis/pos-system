@@ -17,7 +17,7 @@
       if($select->rowCount() > 0 ){
           echo'<script type="text/javascript">
               jQuery(function validation(){
-              swal("Warning", "Kategori Sudah Ada", "warning", {
+              swal("Warning", "Category Already Exists!", "warning", {
               button: "Continue",
                   });
               });
@@ -30,7 +30,7 @@
             if($insert->execute()){
               echo '<script type="text/javascript">
               jQuery(function validation(){
-              swal("Success", "Kategori Baru Sudah Ditambahkan", "success", {
+              swal("Success", "New Category Added Successfully!", "success", {
               button: "Continue",
                   });
               });
@@ -53,7 +53,7 @@
                 <form action="" method="POST">
                   <div class="box-body">
                     <div class="form-group">
-                      <label for="category">Nama Kategori</label>
+                      <label for="category">Category Name</label>
                       <input type="text" class="form-control" name="category" placeholder="Enter Category">
                     </div>
                   </div><!-- /.box-body -->
@@ -67,7 +67,7 @@
       <div class="col-md-8">
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Daftar Kategori</h3>
+            <h3 class="box-title">Category List</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body" style="overflow-x:auto;">
@@ -75,8 +75,8 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama Kategori</th>
-                        <th>Action</th>
+                        <th>Category Name</th>
+                        <th>Modify</th>
                     </tr>
 
                 </thead>
@@ -92,7 +92,7 @@
                         <a href="edit_category.php?id=<?php echo $row->cat_id; ?>"
                         class="btn btn-info btn-sm" name="btn_edit"><i class="fa fa-pencil"></i></a>
                         <a href="delete_category.php?id=<?php echo $row->cat_id; ?>"
-                        onclick="return confirm('Hapus Kategori?')"
+                        onclick="return confirm('Delete Category?')"
                         class="btn btn-danger btn-sm" name="btn_delete"><i class="fa fa-trash"></i></a>
                     </td>
                   </tr>

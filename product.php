@@ -40,8 +40,8 @@
     <section class="content container-fluid">
         <div class="box box-success">
             <div class="box-header with-border">
-                <h3 class="box-title">Daftar Produk</h3>
-                <a href="add_product.php" class="btn btn-success btn-sm pull-right">Tambah Produk</a>
+                <h3 class="box-title">Product List</h3>
+                <a href="add_product.php" class="btn btn-success btn-sm pull-right">Add Product</a>
             </div>
             <div class="box-body">
                 <div style="overflow-x:auto;">
@@ -49,12 +49,12 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Produk</th>
-                                <th>Kode</th>
-                                <th>Modal</th>
-                                <th>Jual</th>
-                                <th>Persediaan</th>
-                                <th>Opsi</th>
+                                <th>Product</th>
+                                <th>Code</th>
+                                <th>Capital</th>
+                                <th>Selling</th>
+                                <th>Stock</th>
+                                <th>Modify</th>
                             </tr>
 
                         </thead>
@@ -69,8 +69,8 @@
                                 <td><?php echo $no++ ;?></td>
                                 <td><?php echo $row->product_name; ?></td>
                                 <td><?php echo $row->product_code; ?></td>
-                                <td>Rp <?php echo number_format($row->purchase_price);?></td>
-                                <td>Rp <?php echo number_format($row->sell_price); ?></td>
+                                <td>Ksh. <?php echo number_format($row->purchase_price);?></td>
+                                <td>Ksh. <?php echo number_format($row->sell_price); ?></td>
                                 <td> <?php if($row->stock=="0"){ ?>
                                 <span class="label label-danger"><?php echo $row->stock; ?></span>
                                 <?php }elseif($row->stock<=$row->min_stock){ ?>

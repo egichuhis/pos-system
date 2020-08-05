@@ -38,7 +38,7 @@
             if($select->rowCount() > 0 ){
                 echo'<script type="text/javascript">
                     jQuery(function validation(){
-                    swal("Warning", "Nama Pengguna Sudah Ada", "warning", {
+                    swal("Warning", "Username already exists!", "warning", {
                     button: "Continue",
                         });
                     });
@@ -57,7 +57,7 @@
                 if($insert->execute()){
                     echo'<script type="text/javascript">
                         jQuery(function validation(){
-                        swal("Success", "Pengguna Baru Sudah Ditambahkan", "success", {
+                        swal("Success", "New User Added Successfully!", "success", {
                         button: "Continue",
                             });
                         });
@@ -77,28 +77,28 @@
             <div class="col-md-4">
                 <div class="box box-success">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Daftarkan Akun Baru</h3>
+                        <h3 class="box-title">Register a New Account</h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
                         <div class="box-body">
                                 <div class="form-group">
-                                    <label for="username">Nama Pengguna</label>
+                                    <label for="username">Username</label>
                                     <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="fname">Nama Lengkap</label>
+                                    <label for="fname">Full Name</label>
                                     <input type="text" class="form-control" id="fname" name="fullname" placeholder="Enter Full Name" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="password">Kata Sandi</label>
+                                    <label for="password">Password</label>
                                     <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="hidden" class="form-control" id="password" name="status" placeholder="Password" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Wewenang </label>
+                                    <label>Authority </label>
                                     <select class="form-control" name="select_option" required>
                                         <option>Admin</option>
                                         <option>Operator</option>
@@ -107,7 +107,7 @@
                         </div><!-- /.box-body -->
 
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-primary" name="submit">Daftar</button>
+                            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -116,7 +116,7 @@
             <div class="col-md-8">
             <div class="box">
                 <div class="box-header with-border">
-                <h3 class="box-title">Daftar Pengguna</h3>
+                <h3 class="box-title">Users List</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -125,10 +125,10 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama Pengguna</th>
-                                    <th>Nama Lengkap</th>
-                                    <th>Wewenang</th>
-                                    <th>Pilihan</th>
+                                    <th>Username</th>
+                                    <th>Full Name</th>
+                                    <th>Authority</th>
+                                    <th>Delete</th>
                                 </tr>
 
                             </thead>

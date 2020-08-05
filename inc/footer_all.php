@@ -5,7 +5,7 @@
       Inventory|POS Ver. 1.5
     </div>
     <!-- Default to the left -->
-    <strong>Toko Hussein</a>.</strong> Jl. Jakarta Ruko No.1
+    <strong>edwingichuhis@gmail.com</a>.</strong>
   </footer>
 </div>
 <!-- ./wrapper -->

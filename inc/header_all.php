@@ -103,7 +103,7 @@
                   </div>
                   <div class="pull-right">
                     <a href="misc/logout.php" class="btn btn-default btn-flat"
-                    onclick="return confirm('ANDA YAKIN ?')"
+                    onclick="return confirm('Confirm logout ?')"
                     class="btn btn-danger">Sign out</a>
                   </div>
                 </li>
@@ -123,13 +123,13 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">Menu</li>
-          <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Beranda</span></a></li>
-          <li><a href="./category.php"><i class="fa fa-list-alt"></i> <span>Kategori Produk</span></a></li>
-          <li><a href="./satuan.php"><i class="fa fa-balance-scale"></i> <span>Satuan Produk</span></a></li>
-          <li><a href="./register.php"><i class="fa fa-users"></i> <span>Pengguna Applikasi</span></a></li>
-          <li><a href="./product.php"><i class="fa fa-archive"></i> <span>Produk</span></a></li>
-          <li><a href="./order.php"><i class="fa fa-shopping-cart"></i> <span>Transaksi</span></a></li>
-          <li><a href="report_sales.php"><i class="fa fa-newspaper-o"></i> <span>Laporan</span></a></li>
+          <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+          <li><a href="./category.php"><i class="fa fa-list-alt"></i> <span>Product Categories</span></a></li>
+          <li><a href="./satuan.php"><i class="fa fa-balance-scale"></i> <span>Product Unit</span></a></li>
+          <li><a href="./register.php"><i class="fa fa-users"></i> <span>Application Users</span></a></li>
+          <li><a href="./product.php"><i class="fa fa-archive"></i> <span>Product</span></a></li>
+          <li><a href="./order.php"><i class="fa fa-shopping-cart"></i> <span>Transaction</span></a></li>
+          <li><a href="report_sales.php"><i class="fa fa-newspaper-o"></i> <span>Report</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
       </section>

@@ -21,7 +21,7 @@
     if($delete->execute()){
         echo'<script type="text/javascript">
             jQuery(function validation(){
-            swal("Info", "Transaksi Telah Dihapus", "info", {
+            swal("Info", "Transaction Was Deleted", "info", {
             button: "Continue",
                 });
             });
@@ -40,7 +40,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Transaksi
+        Transaction
       </h1>
       <hr>
     </section>
@@ -49,8 +49,8 @@
     <section class="content container-fluid">
         <div class="box box-success">
             <div class="box-header with-border">
-                <h3 class="box-title">Daftar Transaksi</h3>
-                <a href="create_order.php" class="btn btn-success btn-sm pull-right">Tambah Transaksi</a>
+                <h3 class="box-title">Transaction List</h3>
+                <a href="create_order.php" class="btn btn-success btn-sm pull-right">Add Transaction</a>
             </div>
             <div class="box-body">
                 <div style="overflow-x:auto;">
@@ -58,10 +58,10 @@
                         <thead>
                             <tr>
                                 <th style="width:20px;">No</th>
-                                <th style="width:100px;">Petugas</th>
-                                <th style="width:100px;">Tanggal</th>
-                                <th style="width:100px;">Uang Masuk</th>
-                                <th style="width:50px;">Opsi</th>
+                                <th style="width:100px;">Operator</th>
+                                <th style="width:100px;">Date</th>
+                                <th style="width:100px;">Enter Money</th>
+                                <th style="width:50px;">Option</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -75,10 +75,10 @@
                                 <td><?php echo $no++ ; ?></td>
                                 <td class="text-uppercase"><?php echo $row->cashier_name; ?></td>
                                 <td><?php echo $row->order_date; ?></td>
-                                <td>Rp. <?php echo number_format($row->total); ?></td>
+                                <td>Ksh. <?php echo number_format($row->total); ?></td>
                                 <td>
                                     <?php if($_SESSION['role']=="Admin"){ ?>
-                                    <a href="order.php?id=<?php echo $row->invoice_id; ?>" onclick="return confirm('Hapus Transaksi?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    <a href="order.php?id=<?php echo $row->invoice_id; ?>" onclick="return confirm('Delete Transaction?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                     <?php } ?>
                                     <a href="misc/nota.php?id=<?php echo $row->invoice_id; ?>" target="_blank" class="btn btn-info btn-sm"><i class="fa fa-print"></i></a>
                                 </td>

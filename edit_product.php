@@ -51,7 +51,7 @@
                     if($img_size>= 1000000){
                         $error ='<script type="text/javascript">
                                 jQuery(function validation(){
-                                swal("Error", "File Tidak Lebih Dari 1MB", "error", {
+                                swal("Error", "File Not More Than 1MB", "error", {
                                 button: "Continue",
                                     });
                                 });
@@ -83,7 +83,7 @@
                                 }
 
                             }else{
-                                echo 'Gagal Upload File';
+                                echo 'Failed To Upload File';
                             }
                         }
 
@@ -91,7 +91,7 @@
                 }else{
                     $error = '<script type="text/javascript">
                     jQuery(function validation(){
-                    swal("Error", "Tolong Upload Gambar Dengan Format : jpg, jpeg, png, gif", "error", {
+                    swal("Error", "Please Upload Picture With Format : jpg, jpeg, png, gif", "error", {
                     button: "Continue",
                         });
                     });
@@ -121,7 +121,7 @@
                 }else{
                     echo '<script type="text/javascript">
                         jQuery(function validation(){
-                        swal("Error", "Terjadi Kesalahan", "error", {
+                        swal("Error", "An Error Occured!", "error", {
                         button: "Continue",
                             });
                         });
@@ -153,17 +153,17 @@
                 <div class="box-body">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Kode Produk</label>
+                            <label for="">Kode Product</label>
                             <input type="text" class="form-control"
                             name="product_code" value="<?php echo $productCode_db; ?>" required readonly>
                         </div>
                         <div class="form-group">
-                            <label for="">Nama Produk</label>
+                            <label for="">Product Name</label>
                             <input type="text" class="form-control"
                             name="product_name" value="<?php echo $productName_db; ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="">Kategori</label>
+                            <label for="">Category</label>
                             <select class="form-control" name="category" required>
                                 <?php
                                 $select = $pdo->prepare("SELECT * FROM tbl_category");
@@ -182,13 +182,13 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Harga Modal</label>
+                            <label for="">Purchase Price</label>
                             <input type="number" min="1000" step="100"
                             class="form-control"
                             name="purchase_price" value="<?php echo $purchase_db; ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="">Harga Jual</label>
+                            <label for="">Selling Price</label>
                             <input type="number" min="1000" step="100"
                             class="form-control"
                             name="sell_price" value="<?php echo $sell_db; ?>" required>
@@ -197,17 +197,17 @@
 
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Persediaan</label>
+                            <label for="">Stock</label>
                             <input type="number" min="1" step="1"
                             class="form-control" name="stock" value="<?php echo $stock_db; ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="">Persediaan Minimal</label>
+                            <label for="">Minimum Stock</label>
                             <input type="number" min="1" step="1"
                             class="form-control" name="min_stock" value="<?php echo $min_stock_db; ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="">Satuan</label>
+                            <label for="">Unit</label>
                             <select class="form-control" name="satuan" required>
                                 <?php
                                 $select = $pdo->prepare("SELECT * FROM tbl_satuan");
@@ -226,7 +226,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="">Deskripsi Produk</label>
+                            <label for="">Product Description</label>
                             <textarea name="description" id="description"
                             cols="30" rows="10" class="form-control" required><?php echo $desc_db; ?></textarea>
                         </div>
@@ -234,7 +234,7 @@
 
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="">Gambar Produk</label>
+                            <label for="">Product Picture</label>
                             <input type="file" class="input-group"
                             name="product_img">
                             <img src="upload/<?php echo $product_img?>" alt="Preview" class="img-responsive" />
@@ -244,8 +244,8 @@
 
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary"
-                    name="update_product">Perbarui Produk</button>
-                    <a href="product.php" class="btn btn-warning">Kembali</a>
+                    name="update_product">Update Product</button>
+                    <a href="product.php" class="btn btn-warning">Back</a>
                 </div>
             </form>
 

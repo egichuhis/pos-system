@@ -18,7 +18,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Grafik Penjualan
+        Sales Chart
       </h1>
       <hr>
     </section>
@@ -30,8 +30,8 @@
                 <div class="box-header with-border">
                     <h3 class="box-title">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Dari Tanggal : <?php echo $_POST['date_1']?> --
-                            Sampai Tanggal : <?php echo $_POST['date_2'] ?></h3>
+                            <h3 class="box-title">From Date : <?php echo $_POST['date_1']?> --
+                            To Date : <?php echo $_POST['date_2'] ?></h3>
                         </div>
                     </h3>
                 </div>
@@ -122,7 +122,7 @@
         data: {
             labels: <?php echo json_encode($date); ?>,
             datasets: [{
-                label: 'Total Pendapatan',
+                label: 'Total Income',
                 data: <?php echo json_encode($total); ?>,
                 backgroundColor: 'rgb(13, 192, 58)',
                 borderColor: 'rgb(32, 204, 75)',
@@ -147,7 +147,7 @@
         data: {
             labels: <?php echo json_encode($pname); ?>,
             datasets: [{
-                label: 'Total Produk Terjual',
+                label: 'Total Product Sold',
                 data: <?php echo json_encode($qty); ?>,
                 backgroundColor: 'rgb(120,112,175)',
                 borderColor: 'rgb(255,255,255)',

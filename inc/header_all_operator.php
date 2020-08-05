@@ -135,9 +135,9 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Main Menu</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Beranda</span></a></li>
-        <li><a href="product.php"><i class="fa fa-archive"></i> <span>Produk</span></a></li>
-        <li><a href="order.php"><i class="fa fa-shopping-cart"></i> <span>Transaksi</span></a></li>
+        <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li><a href="product.php"><i class="fa fa-archive"></i> <span>Product</span></a></li>
+        <li><a href="order.php"><i class="fa fa-shopping-cart"></i> <span>Transaction</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

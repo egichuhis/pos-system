@@ -3,8 +3,8 @@
 * FPDF                                                                         *
 *                                                                              *
 * Version: 1.81                                                                *
-* Date:    2015-12-20                                                          *
-* Author:  Olivier PLATHEY                                                     *
+* Date:    2020-08-03                                                          *
+* Author:  Edwin Gichuhi                                                     *
 *******************************************************************************/
 
 define('FPDF_VERSION','1.81');

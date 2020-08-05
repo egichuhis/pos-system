@@ -13,7 +13,7 @@
         $update = $pdo->prepare("UPDATE tbl_users SET is_active = 0 WHERE product_id=$id");
         $update->execute();
         if($update->execute()){
-            echo 'Users Diactivate';
+            echo 'Users Deactivate';
         }else{
             echo 'Something is Wrong';
         }

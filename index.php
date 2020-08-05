@@ -71,11 +71,11 @@ if(isset($_POST['btn_login'])){
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="index.php"><b>Inventory|</b>POS</a>
+    <a href="index.php"><b>Amigos| POS</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Silahkan Login</p>
+    <p class="login-box-msg">User Login</p>
 
     <form action="" method="post" autocomplete="off">
       <div class="form-group has-feedback">
@@ -96,7 +96,7 @@ if(isset($_POST['btn_login'])){
         if(!empty($message)){
           echo'<script type="text/javascript">
               jQuery(function validation(){
-              swal("Login Success", "Welcome '.$_SESSION['role'].'", "success", {
+              swal("Login Successful!", "Welcome '.$_SESSION['role'].'", "success", {
               button: "Continue",
                 });
               });
@@ -106,7 +106,7 @@ if(isset($_POST['btn_login'])){
         }else{
           echo'<script type="text/javascript">
               jQuery(function validation(){
-              swal("Login Fail", "Username or Password is Wrong!", "error", {
+              swal("Login Failed!", "Wrong Username or Password", "error", {
               button: "Continue",
                 });
               });
@@ -129,6 +129,14 @@ if(isset($_POST['btn_login'])){
   });
 </script>
 
+  <footer class="col-xs-12">
+
+    <!-- Default to the left -->
+       
+    <strong>Inventory|POS Ver. 1.5</a>.</strong>
+    <br>edwingichuhis@gmail.com<br>
+
+  </footer>
 
 </body>
 </html>

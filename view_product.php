@@ -16,7 +16,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Produk
+        Product
       </h1>
     </section>
 
@@ -34,23 +34,23 @@
                 <div class="col-md-6">
                   <ul class="list-group">
 
-                    <center><p class="list-group-item list-group-item-success">Detil Produk</p></center>
-                    <li class="list-group-item"> <b>Kode Produk</b>     :<span class="label badge pull-right"><?php echo $row->product_code; ?></span></li>
-                    <li class="list-group-item"><b>Nama Produk</b>    :<span class="label label-info pull-right"><?php echo $row->product_name; ?></span></li>
-                    <li class="list-group-item"><b>Kategori Produk</b>        :<span class="label label-primary pull-right"><?php echo $row->product_category; ?></span></li>
-                    <li class="list-group-item"><b>Harga Modal</b>  :<span class="label label-warning pull-right">Rp. <?php echo number_format($row->purchase_price); ?></span></li>
-                    <li class="list-group-item"><b>Harga Jual</b>     :<span class="label label-warning pull-right">Rp. <?php echo $row->sell_price; ?></span></li>
-                    <li class="list-group-item"><b>Keuntungan</b>           :<span class="label label-success pull-right">Rp. <?php echo number_format(($row->sell_price - $row->purchase_price)); ?></span></li>
-                    <li class="list-group-item"><b>Persediaan </b>          :<span class="label label-default pull-right"><?php echo $row->stock; ?></span></li>
-                    <li class="list-group-item"><b>Persediaan Minimal </b>   :<span class="label label-default pull-right"><?php echo $row->min_stock; ?></span></li>
-                    <li class="list-group-item"><b>Satuan</b>               :<span class="label label-default pull-right"><?php echo $row->product_satuan; ?></span></li>
-                    <li class="list-group-item"><b>Deskripsi Singkat</b>    :</li>
+                    <center><p class="list-group-item list-group-item-success">Product Details</p></center>
+                    <li class="list-group-item"> <b>Product Code</b>     :<span class="label badge pull-right"><?php echo $row->product_code; ?></span></li>
+                    <li class="list-group-item"><b>Product Name</b>    :<span class="label label-info pull-right"><?php echo $row->product_name; ?></span></li>
+                    <li class="list-group-item"><b>Product Category</b>        :<span class="label label-primary pull-right"><?php echo $row->product_category; ?></span></li>
+                    <li class="list-group-item"><b>Purchase Price</b>  :<span class="label label-warning pull-right">Ksh. <?php echo number_format($row->purchase_price); ?></span></li>
+                    <li class="list-group-item"><b>Selling Price</b>     :<span class="label label-warning pull-right">Ksh. <?php echo $row->sell_price; ?></span></li>
+                    <li class="list-group-item"><b>Profit</b>           :<span class="label label-success pull-right">Ksh. <?php echo number_format(($row->sell_price - $row->purchase_price)); ?></span></li>
+                    <li class="list-group-item"><b>Stock </b>          :<span class="label label-default pull-right"><?php echo $row->stock; ?></span></li>
+                    <li class="list-group-item"><b>Minimum Stock</b>   :<span class="label label-default pull-right"><?php echo $row->min_stock; ?></span></li>
+                    <li class="list-group-item"><b>Unit</b>               :<span class="label label-default pull-right"><?php echo $row->product_satuan; ?></span></li>
+                    <li class="list-group-item"><b>Short Description</b>    :</li>
                     <li class="list-group-item col-md-12"><span class="text-muted"><?php echo $row->description ?></span></li>
                   </ul>
                 </div>
                 <div class="col-md-6">
                   <ul class="list-group">
-                    <center><p class="list-group-item list-group-item-success">Gambar Produk</p></center>
+                    <center><p class="list-group-item list-group-item-success">Product Picture</p></center>
                     <img src="upload/<?php echo $row->img?>" alt="Product Image" class="img-responsive">
                   </ul>
                 </div>
@@ -59,7 +59,7 @@
               ?>
             </div>
             <div class="box-footer">
-                <a href="product.php" class="btn btn-warning">Kembali</a>
+                <a href="product.php" class="btn btn-warning">Back</a>
             </div>
 
         </div>

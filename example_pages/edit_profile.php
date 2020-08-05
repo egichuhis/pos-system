@@ -26,7 +26,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Kategori Produk
+        Product Category
       </h1>
       <hr>
     </section>
@@ -41,7 +41,7 @@
                 <form action="" method="POST">
                   <div class="box-body">
                     <div class="form-group">
-                      <label for="category">Nama Kategori</label>
+                      <label for="category">Category Name</label>
                       <input type="text" class="form-control" name="category" placeholder="Enter Category"
                       value="<?php echo $cat_name; ?>" required>
                     </div>
@@ -57,7 +57,7 @@
       <div class="col-md-8">
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Daftar Kategori</h3>
+            <h3 class="box-title">Category List</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">

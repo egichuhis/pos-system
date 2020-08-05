@@ -13,7 +13,7 @@ if(isset($_POST['btn_edit'])){
       if($update->rowCount() > 0){
         echo'<script type="text/javascript">
         jQuery(function validation(){
-        swal("Warning", "Satuan Telah Ada", "warning", {
+        swal("Warning", "Unit Already Exists!", "warning", {
         button: "Continue",
             });
         });
@@ -21,7 +21,7 @@ if(isset($_POST['btn_edit'])){
       }elseif($update->execute()){
         echo'<script type="text/javascript">
         jQuery(function validation(){
-        swal("Success", "Nama Satuan Telah Diperbarui", "success", {
+        swal("Success", "Unit Name Was Updated!", "success", {
         button: "Continue",
             });
         });
@@ -48,7 +48,7 @@ if($id=$_GET['id']){
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Kategori Produk
+        Product Category
       </h1>
       <hr>
     </section>
@@ -63,14 +63,14 @@ if($id=$_GET['id']){
                 <form action="" method="POST">
                   <div class="box-body">
                     <div class="form-group">
-                      <label for="category">Nama Satuan</label>
-                      <input type="text" class="form-control" name="satuan" placeholder="Masukan Satuan"
+                      <label for="category">Unit Name</label>
+                      <input type="text" class="form-control" name="satuan" placeholder="Enter Unit"
                       value="<?php echo $sat_name; ?>" required>
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">
-                      <button type="submit" class="btn btn-primary" name="btn_edit">Perbarui</button>
-                      <a href="satuan.php" class="btn btn-warning">Kembali</a>
+                      <button type="submit" class="btn btn-primary" name="btn_edit">Update</button>
+                      <a href="satuan.php" class="btn btn-warning">Back</a>
                   </div>
                 </form>
             </div>
@@ -79,7 +79,7 @@ if($id=$_GET['id']){
       <div class="col-md-8">
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Daftar Satuan</h3>
+            <h3 class="box-title">Unit List</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
@@ -87,7 +87,7 @@ if($id=$_GET['id']){
               <thead>
                   <tr>
                       <th>No</th>
-                      <th>Nama Satuan</th>
+                      <th>Unit Name</th>
                   </tr>
               </thead>
               <tbody>
